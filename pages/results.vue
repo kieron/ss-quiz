@@ -10,7 +10,7 @@
       <div class="text-lg">
         {{ grading }}
       </div>
-      <Button label="Try again?" @click="$router.push('/')" class="mt-auto" />
+      <Button label="Try again" @click="$router.push('/')" class="mt-auto" />
     </div>
 
     <div class="text-white text-xs text-indigo-500">

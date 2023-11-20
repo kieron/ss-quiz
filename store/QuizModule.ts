@@ -73,7 +73,7 @@ export default class QuizModule extends VuexModule {
       this.setLoading(true);
 
       const response = await fetch(
-        `https://opentdb.com/api.php?amount=4&difficulty=${this.difficulty}&type=multiple`
+        `https://opentdb.com/api.php?amount=10&difficulty=${this.difficulty}&type=multiple`
       );
       const data = await response.json();
 
