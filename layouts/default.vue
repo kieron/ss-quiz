@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-indigo-950 w-full h-screen flex items-center justify-center p-5"
+    class="bg-indigo-950 w-full h-screen flex md:items-center justify-center p-5"
   >
     <div
       class="overflow-hidden slide-in-top border-4 border-indigo-900 shadow-lg md:w-1/2 md:h-1/2 w-full h-full text-white p-3 md:p-12 flex flex-col rounded-lg"
