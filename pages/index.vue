@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-5">
       <h1 class="font-medium text-3xl">A quiz!</h1>
       <span>
-        You will have 10 seconds to answer each question! There are 10 questions
+        You will have 10 seconds to answer each question! There are 15 questions
         in total.
       </span>
     </div>
