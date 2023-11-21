@@ -1,7 +1,9 @@
 # ss-quiz
 
 Yarn: 1.22.5
+
 Node: 18.18.2
+
 Web Preview: https://ss-quiz.pages.dev/
 
 ## Build Setup
