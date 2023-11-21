@@ -65,6 +65,15 @@ export default class QuizModule extends VuexModule {
     this._loading = payload;
   }
 
+  @Mutation
+  resetModule() {
+    this._difficulty = null;
+    this._questions = [];
+    this._answers = [];
+    this._error = null;
+    this._loading = false;
+  }
+
   @Action
   async fetchQuestions() {
     if (!this.difficulty) return;
@@ -73,7 +82,7 @@ export default class QuizModule extends VuexModule {
       this.setLoading(true);
 
       const response = await fetch(
-        `https://opentdb.com/api.php?amount=10&difficulty=${this.difficulty}&type=multiple`
+        `https://opentdb.com/api.php?amount=3&difficulty=${this.difficulty}&type=multiple`
       );
       const data = await response.json();
 

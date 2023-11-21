@@ -51,6 +51,9 @@ export default Vue.extend({
       ] as DifficultyButton[],
     };
   },
+  mounted() {
+    quizModule.resetModule();
+  },
   methods: {
     setDifficulty(key: string) {
       quizModule.setDifficulty(key);
