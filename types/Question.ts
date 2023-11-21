@@ -1,4 +1,4 @@
-export default interface Question {
+export default interface QuestionType {
   type: string;
   difficulty: string;
   category: string;

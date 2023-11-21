@@ -43,15 +43,13 @@ export default Vue.extend({
     correctAnswers(): number {
       if (!this.questions.length) {
         this.$router.push("/");
-        return 0; // Return 0 if there are no questions
+        return 0;
       }
 
-      const normalizedCorrectAnswers = this.questions.map((q) =>
-        this.normalizeString(q.correct_answer)
+      const normalizedCorrectAnswers = this.questions.map(
+        (q) => q.correct_answer
       );
-      const normalizedUserAnswers = this.answers.map((a) =>
-        this.normalizeString(a)
-      );
+      const normalizedUserAnswers = this.answers.map((a) => a);
 
       return this.questions.reduce((count, _, index) => {
         return normalizedCorrectAnswers[index] === normalizedUserAnswers[index]
@@ -67,13 +65,6 @@ export default Vue.extend({
       if (percentage >= 50) return "It's a start! 🥉";
       if (percentage >= 40) return "Well, at least you tried! 🤔";
       return "Hmm, maybe try again? 🙄";
-    },
-  },
-  methods: {
-    normalizeString(str: any) {
-      const div = document.createElement("div");
-      div.innerHTML = str;
-      return div.textContent || div.innerText || "";
     },
   },
 });
